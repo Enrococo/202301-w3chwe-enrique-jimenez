@@ -55,45 +55,32 @@ export const series = [
   },
 ];
 
-export default class Card extends Component {
+export default class PokemonCard extends Component {
   #i: number;
   constructor(
     parentElement: HTMLElement | null,
     i: number,
     cssClasses: string = '',
   ) {
-    super(parentElement, 'ul', cssClasses);
+    super(parentElement, 'article', cssClasses);
     this.#i = i;
   }
 
   render(): void {
     super.render();
-    this.element.innerHTML = `
-    
-    
-            <li class="serie">
-              <img class="serie__poster"
-                src= ${series[this.#i].poster}
-                alt="${series[this.#i].name} poster" />
-              <h4 class="serie__title">${series[this.#i].name}</h4>
-              <p class="serie__info">${series[this.#i].name}
-              (${series[this.#i].year})</p>
-              <ul class="score">
-                <li class="score__star">
-                  <i class="icon--score fas fa-star" title="1/5"></i>
-                </li>
-                <li class="score__star">
-                  <i class="icon--score fas fa-star" title="2/5"></i>
-                </li>
-                <li class="score__star">
-                  <i class="icon--score fas fa-star" title="3/5"></i>
-                </li>
-                <li class="score__star">
-                  <i class="icon--score fas fa-star" title="4/5"></i>
-                </li>
-                <li class="score__star">
-                  <i class="icon--score fas fa-star" title="5/5"></i>
-                </li>
+    this.element.innerHTML = `<div class="pokemonCard-pic">
+              <img class="pokemonCard-pic__gif"
+                src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif"
+                alt="Pokemon" /> </div>
+              <div class="pokemonCard-info"><h4 class="pokemonCard-info__name">Bulbasaur</h4>
+              <ul class="pokemonCard-info__characteristics">
+                <li> Type: Grass </li>
+                <li> Base experience: 64 </li>
+                <li> Weight: 69 </li></div>
+             <div class="pokemonCard-extra">
+             <span>1/1000</span>
+             <i class="fa-light fa-plus"></i>
+             </div>
               `;
   }
 }
