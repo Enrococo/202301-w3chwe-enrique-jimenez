@@ -181,3 +181,26 @@ img {
   border-radius: 15px;
   padding: 10px 20px;
 }
+
+.pokemonCard {
+  max-width: 150px;
+  background-color: #ffcb05;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.pokemonCard-pic {
+  display: flex;
+  height: 95px;
+  justify-content: center;
+  padding: 10px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #3b5ba7;
+  border-radius: 5px;
+}
+
+.pokemonCard-info {
+  color: rgb(241, 241, 241);
+  font-size: 0.8rem;
+}
