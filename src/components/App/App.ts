@@ -1,4 +1,5 @@
-import PokemonCard from '../Card/Card.js';
+import { pokemonsList } from '../../data/data.js';
+import CardsList from '../CardsList/CardsList.js';
 import Component from '../Component.js';
 import LogoHeading from '../LogoHeading/LogoHeading.js';
 import Menu from '../Menu/Menu.js';
@@ -11,15 +12,13 @@ export default class App extends Component {
     this.#children = [
       new LogoHeading('/images/pokemon-logo.svg', this.element, 'main-header'),
       new Menu(this.element, 'menu'),
-      new PokemonCard(this.element, 1, 'pokemonCard'),
-      new PokemonCard(this.element, 1, 'pokemonCard'),
-      new PokemonCard(this.element, 1, 'pokemonCard'),
-      new PokemonCard(this.element, 1, 'pokemonCard'),
+      new CardsList(this.element, pokemonsList),
     ];
   }
 
   render(): void {
     super.render();
     this.#children.forEach(component => component.render());
+    console.log(pokemonsList);
   }
 }

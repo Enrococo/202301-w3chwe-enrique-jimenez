@@ -157,6 +157,7 @@ img {
 .menu {
   display: flex;
   gap: 1rem;
+  justify-self: center;
 }
 
 .menu-button:hover {
@@ -182,7 +183,16 @@ img {
   padding: 10px 20px;
 }
 
-.pokemonCard {
+.cards-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards-list__item {
   max-width: 150px;
   background-color: #ffcb05;
   border-radius: 15px;
@@ -203,4 +213,16 @@ img {
 .pokemonCard-info {
   color: rgb(241, 241, 241);
   font-size: 0.8rem;
+}
+
+.pokemonCard-info__icons,
+.pokemonCard-extra-pokeball {
+  width: 15%;
+}
+
+.pokemonCard-extra {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 }
