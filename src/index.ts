@@ -1,4 +1,6 @@
 import App from './components/App/App.js';
+import { getPokemonList } from './data/data.js';
 
-const app = new App(document.body, 'container');
-app.render();
+getPokemonList(0).then(() => {
+  new App(document.body, 'container').render();
+});
